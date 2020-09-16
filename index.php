@@ -28,7 +28,7 @@
 
         <div class="signup-box">
           <h2>تسجيل مشرفة جديدة</h2>
-          <a href="signup.php">
+          <a href="#signup" id="getPage">
             <?php echo file_get_contents("assets/svg/plus.svg"); ?>
             تسجيل جديد
           </a>
@@ -41,40 +41,23 @@
       <!-- Content Side -->
       <div class="content-side loading">
         <div class="loadingContainer"></div>
-        
+
         <div class="list">
           <ul class="right">
-            <li> <a href="index.php"> <img src="assets/svg/home.svg" /> الرئيسية </a> </li>
+            <li> <a href="#home" id="getPage"> <img src="assets/svg/home.svg" /> الرئيسية </a> </li>
             <li> <a href="#"> <img src="assets/svg/question.svg" /> من نحن </a> </li>
           </ul>
 
           <ul class="left">
-            <li> <a href="signup.php"> <img src="assets/svg/plus.svg" /> تسجيل جديد </a> </li>
+            <li> <a href="#signup" id="getPage"> <img src="assets/svg/plus.svg" /> تسجيل جديد </a> </li>
           </ul>
         </div>
 
-        <div class="wrapper">
-          <h1>مكتب التعليم شمال جدة بنات</h1>
-          <p class="description">
-            تماشياً مع رؤية 2030 لبرنامج التحول الرقمي، والذي يهدف إلى نشر الوعي والمعرفة الرقمية، وتأهيل كوادر وطنية ذات كفاءة عالية للدفع بعملية التحول الرقمي. يسعى مكتب تعليم شمال جدة بنات الى التحول الرقمي في طريقة العمل في المكتب بحيث يقل العمل الرتيب و يزيد وقت التفكير بالتطوير و تسريع طريقة العمل اليومية بحيث يتم استغلال تطور التكنولوجيا الكبير الحاصل لخدمة المكتب بشكل أسرع و أفضل و الزيادة من الكفاءة في خط سير العمل بحيث تقل الأخطاء وتزيد الإنتاجية تم اطلاق برنامج مؤشر الغياب والسلوك. البرنامج يسهل عملية حساب المتوسط الحسابي لنسبة الغياب والسلوك للطالبات في المدارس بعد كل زيارة للمشرفة وطباعة التقارير الخاصة بالنتائج النهائية .
-          </p>
+        <!-- Ajax Container -->
+        <div class="wrapper"> <!-- Content will be added here --> </div>
+        <!-- END Ajax container -->
 
-          <div class="benifits">
-            <h5>مزايا البرنامج</h5>
 
-            <ul>
-              <li> <img src="assets/svg/star.svg" /> توفير الوقت والجهد </li>
-              <li>
-                <img src="assets/svg/star.svg" /> طباعة تقرير حسب النوع
-                <ul>
-                  <li> <img src="assets/svg/paper-clip.svg" /> زيارات مشرفة معينة للمدارس </li>
-                  <li> <img src="assets/svg/paper-clip.svg" /> الزيارات المسجلة لمدرسة معينة </li>
-                  <li> <img src="assets/svg/paper-clip.svg" /> تقرير مؤشر التأثير الجماعي على سلوك الطالبات </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
       <!-- END Content Side -->
     </div>
@@ -87,7 +70,7 @@
       </div>
 
       <div class="button">
-        <a href="signup.php" class="signup">
+        <a href="#signup" class="signup" id="getPage">
           <?php echo file_get_contents("assets/svg/plus.svg"); ?>
           تسجيل جديد
         </a>
@@ -96,4 +79,8 @@
     <!-- END Footer Container -->
   </body>
 
+  <footer>
+    <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/home-control.js"></script>
+  </footer>
 </html>

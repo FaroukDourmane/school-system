@@ -1,0 +1,294 @@
+@font-face {
+  font-family: "urw_regular";
+  src: url("../fonts/urw/urw_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "janna_regular";
+  src: url("../fonts/janna/janna_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "janna_bold";
+  src: url("../fonts/janna/janna_bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+a {
+  text-decoration: none; }
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+p, h2, h1 {
+  margin: 0px; }
+
+body, html {
+  padding: 0px;
+  margin: 0px; }
+
+body.disabled::after {
+  content: "";
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  z-index: 900;
+  opacity: 0.9; }
+
+* {
+  box-sizing: border-box;
+  outline: 0; }
+
+.page-wrapper {
+  display: flex;
+  min-height: 100vh; }
+  .page-wrapper .login-side {
+    width: 500px;
+    min-height: 100%;
+    background: #F9F9F9;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 50px 0; }
+    .page-wrapper .login-side h2 {
+      font-family: "janna_regular";
+      font-size: 25px;
+      color: #555555;
+      margin-bottom: 20px;
+      font-weight: normal; }
+    .page-wrapper .login-side form {
+      width: 300px;
+      margin: 0 auto; }
+      .page-wrapper .login-side form input, .page-wrapper .login-side form button {
+        display: block;
+        width: 100%;
+        line-height: 50px;
+        text-align: center;
+        border: 0;
+        font-family: "urw_regular";
+        font-size: 15px;
+        color: #555;
+        background: #FFF;
+        border-radius: 20px; }
+        .page-wrapper .login-side form input[type="text"], .page-wrapper .login-side form input[type="password"], .page-wrapper .login-side form button[type="text"], .page-wrapper .login-side form button[type="password"] {
+          background: #FFF;
+          margin-bottom: 10px;
+          box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.03); }
+        .page-wrapper .login-side form input[type="submit"], .page-wrapper .login-side form button[type="submit"] {
+          color: #FFF;
+          background: #333;
+          margin-top: 40px;
+          cursor: pointer; }
+    .page-wrapper .login-side img.rocket {
+      margin-top: 50px; }
+    .page-wrapper .login-side .signup-box::before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100px;
+      background: rgba(112, 112, 112, 0.3);
+      margin: 20px auto; }
+    .page-wrapper .login-side .signup-box a {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto;
+      line-height: 50px;
+      background: #1C9DFF;
+      color: #FFF;
+      font-family: "urw_regular";
+      font-size: 15px;
+      border-radius: 20px;
+      direction: rtl;
+      position: relative; }
+      .page-wrapper .login-side .signup-box a svg {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%); }
+        .page-wrapper .login-side .signup-box a svg path {
+          fill: #FFF; }
+  .page-wrapper .content-side {
+    width: 100%;
+    padding: 50px;
+    direction: rtl; }
+    .page-wrapper .content-side .list {
+      display: flex; }
+      .page-wrapper .content-side .list ul.right {
+        width: 100%; }
+        .page-wrapper .content-side .list ul.right li {
+          margin-left: 10px; }
+      .page-wrapper .content-side .list ul.left {
+        flex-shrink: 0; }
+      .page-wrapper .content-side .list ul li {
+        display: inline-block; }
+        .page-wrapper .content-side .list ul li a {
+          display: block;
+          line-height: 50px;
+          font-family: "urw_regular";
+          color: #555555;
+          font-size: 15px; }
+          .page-wrapper .content-side .list ul li a img {
+            margin-left: 5px; }
+    .page-wrapper .content-side .wrapper {
+      margin-top: 50px; }
+      .page-wrapper .content-side .wrapper h1 {
+        font-family: "janna_bold";
+        color: #555555;
+        margin-bottom: 20px; }
+      .page-wrapper .content-side .wrapper p.description {
+        font-family: "urw_regular";
+        font-size: 15px;
+        max-width: 600px;
+        color: #555555;
+        line-height: 30px; }
+      .page-wrapper .content-side .wrapper .benifits {
+        font-family: "urw_regular"; }
+        .page-wrapper .content-side .wrapper .benifits h5 {
+          color: #1C9DFF;
+          font-size: 15px;
+          background: #E9F6FF;
+          border: 1px rgba(28, 157, 255, 0.3) solid;
+          display: inline-block;
+          line-height: 50px;
+          border-radius: 30px;
+          font-weight: normal;
+          padding: 0px 40px; }
+        .page-wrapper .content-side .wrapper .benifits ul li {
+          font-size: 17px;
+          color: #555555;
+          display: block;
+          line-height: 50px; }
+          .page-wrapper .content-side .wrapper .benifits ul li img {
+            vertical-align: middle;
+            margin-left: 10px; }
+          .page-wrapper .content-side .wrapper .benifits ul li ul {
+            padding-right: 20px; }
+            .page-wrapper .content-side .wrapper .benifits ul li ul li {
+              background: #F9F9F9;
+              padding: 0px 20px;
+              width: fit-content;
+              border-radius: 30px;
+              margin-top: 10px;
+              line-height: 40px;
+              font-size: 15px;
+              color: #707070; }
+    .page-wrapper .content-side.loading {
+      position: relative; }
+      .page-wrapper .content-side.loading .wrapper {
+        position: relative; }
+        .page-wrapper .content-side.loading .wrapper::after {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          background: #FFF;
+          opacity: 0.85;
+          z-index: 2; }
+      .page-wrapper .content-side.loading .loadingContainer {
+        opacity: 1;
+        z-index: 3;
+        visibility: visible; }
+
+.footer-container {
+  background: #1C9DFF;
+  position: relative;
+  padding: 20px;
+  display: flex; }
+  .footer-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 51px;
+    top: -50px;
+    background-image: url("../svg/footer-vector.svg");
+    background-position: top;
+    background-size: cover; }
+  .footer-container .button {
+    flex-shrink: 0; }
+    .footer-container .button a {
+      display: inline-block;
+      line-height: 35px;
+      padding: 0px 20px;
+      border: 1px #FFF solid;
+      color: #FFF;
+      font-size: 14px;
+      font-family: "urw_regular";
+      border-radius: 30px;
+      direction: rtl; }
+      .footer-container .button a svg {
+        vertical-align: middle;
+        margin-left: 5px; }
+        .footer-container .button a svg path {
+          fill: #FFF; }
+  .footer-container .copyrights {
+    width: 100%;
+    text-align: left;
+    color: #FFF;
+    font-size: 15px;
+    font-family: "urw_regular"; }
+
+/* #########  LOADING SPINNER  ##### */
+/* ##################################### */
+.loadingContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #CCC;
+  overflow: hidden;
+  transition: 0.6s;
+  opacity: 0;
+  z-index: -99;
+  visibility: hidden; }
+
+.loadingContainer::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: #FFF;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0px 0px 10px 0px #1C9DFF; }
+
+.loadingContainer::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 25px;
+  background: #1C9DFF;
+  border-radius: 50% 50% 0 0;
+  z-index: 2;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: bottom; }
+
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) rotate(360deg);
+    opacity: 1; }
+  100% {
+    transform: translateX(-50%) rotate(-360deg);
+    opacity: 1; } }
+/* #########  END LOADING SPINNER  ##### */
+/* ##################################### */
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "urw_regular";
+  src: url("../fonts/urw/urw_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "janna_regular";
+  src: url("../fonts/janna/janna_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "janna_bold";
+  src: url("../fonts/janna/janna_bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+a {
+  text-decoration: none; }
+
+*.rtl {
+  direction: rtl !important; }
+  *.rtl * {
+    direction: rtl; }
+*.ltr {
+  direction: ltr !important; }
+  *.ltr * {
+    direction: ltr; }
+*.text-right {
+  text-align: right !important; }
+  *.text-right * {
+    text-align: right; }
+*.text-left {
+  text-align: left !important; }
+  *.text-left * {
+    text-align: left; }
+
+.custom-form {
+  font-family: "urw_regular";
+  max-width: 600px; }
+  .custom-form.full {
+    max-width: none; }
+  .custom-form .form-col {
+    display: flex;
+    margin-bottom: 20px; }
+    .custom-form .form-col label {
+      width: 100%;
+      position: relative;
+      margin-right: 10px; }
+      .custom-form .form-col label:last-child {
+        margin-right: 0; }
+      .custom-form .form-col label input[type="submit"], .custom-form .form-col label button[type="submit"] {
+        width: 100%;
+        background: #1C9DFF;
+        line-height: 50px;
+        display: block;
+        border: 0;
+        border-radius: 20px;
+        padding: 0px 20px;
+        font-family: "urw_regular";
+        font-size: 15px;
+        color: #FFF;
+        text-align: center;
+        cursor: pointer !important; }
+      .custom-form .form-col label input {
+        width: 100%;
+        background: #F9F9F9;
+        line-height: 50px;
+        display: block;
+        border: 1px #f1f1f1 solid;
+        border-radius: 20px;
+        padding: 0px 20px;
+        font-family: "urw_regular";
+        font-size: 15px;
+        color: #555; }
+        .custom-form .form-col label input::placeholder {
+          color: #999; }
+      .custom-form .form-col label.palceholder-label {
+        display: flex;
+        line-height: 50px;
+        background: #F9F9F9;
+        border-radius: 20px;
+        padding: 5px; }
+        .custom-form .form-col label.palceholder-label .placeholder {
+          font-size: 14px;
+          color: #555;
+          padding: 0px 10px;
+          background: #FFF;
+          line-height: 50px;
+          border-radius: 20px;
+          flex-shrink: 0;
+          min-width: 100px;
+          text-align: center;
+          transition: background 0.3s; }
+        .custom-form .form-col label.palceholder-label input {
+          width: 100%;
+          border: 0; }
+          .custom-form .form-col label.palceholder-label input:focus + .placeholder {
+            background: rgba(28, 157, 255, 0.1); }
+    .custom-form .form-col.rtl label {
+      margin-right: 0;
+      margin-left: 10px; }
+      .custom-form .form-col.rtl label:last-child {
+        margin-left: 0; }
+
+/*# sourceMappingURL=forms.css.map */

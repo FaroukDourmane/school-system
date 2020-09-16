@@ -1,0 +1,121 @@
+// FONTS
+@font-face
+  font-family: "urw_regular"
+  src: url('../fonts/urw/urw_regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: "janna_regular"
+  src: url('../fonts/janna/janna_regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: "janna_bold"
+  src: url('../fonts/janna/janna_bold.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+// Fonts
+$cairo: 'Cairo', sans-serif
+$tajawal: 'Tajawal', sans-serif
+
+$urw: 'urw_regular'
+$janna: 'janna_regular'
+$janna_bold: 'janna_bold'
+
+// Colors
+$main: #1C9DFF
+
+a
+  text-decoration: none
+
+*
+  &.rtl
+    direction: rtl !important
+    *
+      direction: rtl
+  &.ltr
+    direction: ltr !important
+    *
+      direction: ltr
+  &.text-right
+    text-align: right !important
+    *
+      text-align: right
+  &.text-left
+    text-align: left !important
+    *
+      text-align: left
+
+.custom-form
+  font-family: $urw
+  max-width: 600px
+  &.full
+    max-width: none
+  .form-col
+    display: flex
+    margin-bottom: 20px
+    label
+      width: 100%
+      position: relative
+      margin-right: 10px
+      &:last-child
+        margin-right: 0
+      input,button
+        &[type="submit"]
+          width: 100%
+          background: $main
+          line-height: 50px
+          display: block
+          border: 0
+          border-radius: 20px
+          padding: 0px 20px
+          font-family: $urw
+          font-size: 15px
+          color: #FFF
+          text-align: center
+          cursor: pointer !important
+      input
+        width: 100%
+        background: #F9F9F9
+        line-height: 50px
+        display: block
+        border: 1px #f1f1f1 solid
+        border-radius: 20px
+        padding: 0px 20px
+        font-family: $urw
+        font-size: 15px
+        color: #555
+        &::placeholder
+          color: #999
+      &.palceholder-label
+        display: flex
+        line-height: 50px
+        background: #F9F9F9
+        border-radius: 20px
+        padding: 5px
+        .placeholder
+          font-size: 14px
+          color: #555
+          padding: 0px 10px
+          background: #FFF
+          line-height: 50px
+          border-radius: 20px
+          flex-shrink: 0
+          min-width: 100px
+          text-align: center
+          transition: background 0.3s
+        input
+          width: 100%
+          border: 0
+          &:focus
+            & + .placeholder
+              background: rgba($main,0.1)
+    &.rtl
+      label
+        margin-right: 0
+        margin-left: 10px
+        &:last-child
+          margin-left: 0

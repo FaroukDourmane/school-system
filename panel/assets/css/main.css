@@ -29,8 +29,27 @@ body, html {
   margin: 0;
   background: #F5F5F5; }
 
+* {
+  box-sizing: border-box; }
+
 body {
   padding: 20px 50px 0 50px; }
+  body.disabled *:not(.unblur) {
+    filter: blur(1px);
+    -webkit-filter: blur(1px); }
+  body.disabled .unblur *, body.disabled .widget, body.disabled .widget * {
+    filter: blur(0px);
+    -webkit-filter: blur(0px); }
+  body.disabled::after {
+    content: "";
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 900;
+    opacity: 0.4; }
   body .panel-container {
     font-family: "urw_regular"; }
     body .panel-container .top-wrapper {
@@ -75,7 +94,182 @@ body {
         height: 70px;
         border-radius: 20px 20px 0 0;
         width: 100%;
-        border-bottom: 1px #f1f1f1 solid; }
+        border-bottom: 1px #f1f1f1 solid;
+        padding: 0;
+        display: flex; }
+        body .panel-container .window-container .top-bar .general-options {
+          flex-shrink: 0;
+          border-right: 1px #F1F1F1 solid;
+          margin-right: 20px; }
+          body .panel-container .window-container .top-bar .general-options a {
+            width: 300px;
+            box-sizing: border-box;
+            display: inline-block;
+            color: #333;
+            padding: 0 20px;
+            border-radius: 20px 0 0 0; }
+            body .panel-container .window-container .top-bar .general-options a:hover {
+              background: #f9f9f9; }
+            body .panel-container .window-container .top-bar .general-options a svg {
+              vertical-align: middle;
+              margin-right: 10px; }
+        body .panel-container .window-container .top-bar ul {
+          width: 100%; }
+          body .panel-container .window-container .top-bar ul li {
+            display: inline-block; }
+            body .panel-container .window-container .top-bar ul li a {
+              color: #333333;
+              display: block;
+              line-height: 45px;
+              padding: 0 10px;
+              border-radius: 10px;
+              transition: background 0.3s; }
+              body .panel-container .window-container .top-bar ul li a:hover {
+                background: #F1F1F1; }
+              body .panel-container .window-container .top-bar ul li a svg {
+                vertical-align: middle;
+                margin-left: 0;
+                margin-right: 10px; }
+            body .panel-container .window-container .top-bar ul li.active a {
+              background: #1C9DFF;
+              color: #FFF; }
+              body .panel-container .window-container .top-bar ul li.active a svg path {
+                fill: #FFF; }
+      body .panel-container .window-container .content-wrapper {
+        display: flex;
+        height: calc(100% - 70px);
+        border-radius: 0 0 20px 20px; }
+        body .panel-container .window-container .content-wrapper .side-menu {
+          width: 300px;
+          flex-shrink: 0;
+          background: #F9F9F9;
+          border-radius: 0 0 20px 0;
+          border-right: 1px #f1f1f1 solid; }
+          body .panel-container .window-container .content-wrapper .side-menu ul li {
+            display: block;
+            border-bottom: 1px #f1f1f1 solid; }
+            body .panel-container .window-container .content-wrapper .side-menu ul li:last-child {
+              border-bottom: 0; }
+            body .panel-container .window-container .content-wrapper .side-menu ul li a {
+              display: block;
+              line-height: 50px;
+              padding: 0 20px;
+              color: #555;
+              transition: background 0.3s; }
+              body .panel-container .window-container .content-wrapper .side-menu ul li a:hover {
+                background: #FFF; }
+        body .panel-container .window-container .content-wrapper .content {
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          border-radius: 0 0 0 20px;
+          padding: 20px; }
+          body .panel-container .window-container .content-wrapper .content h1 {
+            color: #555555;
+            margin-bottom: 20px; }
+          body .panel-container .window-container .content-wrapper .content .buttons a {
+            display: inline-block;
+            line-height: 50px;
+            border-radius: 20px;
+            padding: 0px 20px;
+            background: #f9f9f9;
+            color: #555;
+            font-size: 13px;
+            font-weight: 700;
+            margin-right: 10px; }
+            body .panel-container .window-container .content-wrapper .content .buttons a svg, body .panel-container .window-container .content-wrapper .content .buttons a img {
+              vertical-align: middle;
+              margin-right: 10px; }
+            body .panel-container .window-container .content-wrapper .content .buttons a.outline {
+              border: 1px #1C9DFF solid;
+              color: #1C9DFF;
+              background: #FFF; }
+            body .panel-container .window-container .content-wrapper .content .buttons a.primary {
+              background: #1C9DFF;
+              color: #FFF; }
+              body .panel-container .window-container .content-wrapper .content .buttons a.primary svg path {
+                fill: #FFF; }
+          body .panel-container .window-container .content-wrapper .content .stat-flex {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px 0; }
+            body .panel-container .window-container .content-wrapper .content .stat-flex .item {
+              width: 200px;
+              margin-right: 20px; }
+              body .panel-container .window-container .content-wrapper .content .stat-flex .item .title {
+                width: 200px;
+                height: 200px;
+                border-radius: 20px 20px 0 0;
+                background: #1C9DFF;
+                text-align: center;
+                color: #FFF;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                font-weight: 700;
+                position: relative; }
+                body .panel-container .window-container .content-wrapper .content .stat-flex .item .title .add {
+                  position: absolute;
+                  display: block;
+                  width: 30px;
+                  border-radius: 10px;
+                  text-align: center;
+                  line-height: 30px;
+                  border: 1px #FFF solid;
+                  top: 10px;
+                  right: 10px; }
+                  body .panel-container .window-container .content-wrapper .content .stat-flex .item .title .add img {
+                    vertical-align: 2px;
+                    height: 15px;
+                    width: 15px; }
+                body .panel-container .window-container .content-wrapper .content .stat-flex .item .title svg {
+                  display: block;
+                  margin: 0 auto;
+                  height: 70px;
+                  width: 70px;
+                  margin-bottom: 10px; }
+                  body .panel-container .window-container .content-wrapper .content .stat-flex .item .title svg path {
+                    fill: #FFF; }
+              body .panel-container .window-container .content-wrapper .content .stat-flex .item .detail {
+                background: #f9f9f9;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-weight: 700;
+                color: #555555;
+                padding: 20px;
+                box-sizing: border-box;
+                width: 200px;
+                height: 200px;
+                border-bottom: 1px #f1f1f1 solid; }
+                body .panel-container .window-container .content-wrapper .content .stat-flex .item .detail h3 {
+                  font-size: 30px;
+                  margin: 0; }
+                body .panel-container .window-container .content-wrapper .content .stat-flex .item .detail span {
+                  font-weight: 300; }
+                body .panel-container .window-container .content-wrapper .content .stat-flex .item .detail:last-child {
+                  border: 0;
+                  border-radius: 0 0 20px 20px; }
+            body .panel-container .window-container .content-wrapper .content .stat-flex.horizontal {
+              flex-direction: column; }
+              body .panel-container .window-container .content-wrapper .content .stat-flex.horizontal .item {
+                width: auto;
+                height: 200px;
+                display: flex;
+                margin: 0;
+                margin-bottom: 20px; }
+                body .panel-container .window-container .content-wrapper .content .stat-flex.horizontal .item .title {
+                  flex-shrink: 0;
+                  border-radius: 20px 0 0 20px; }
+                body .panel-container .window-container .content-wrapper .content .stat-flex.horizontal .item .detail {
+                  border: 0;
+                  border-right: 1px #f1f1f1 solid; }
+                  body .panel-container .window-container .content-wrapper .content .stat-flex.horizontal .item .detail:last-child {
+                    border: 0;
+                    border-radius: 0 20px 20px 0; }
     body .panel-container .footer-container {
       display: flex;
       font-size: 15px;
@@ -91,5 +285,40 @@ body {
     body .panel-container.rtl .top-wrapper .user .avatar, body .panel-container.rtl .top-wrapper .user .name {
       margin-right: 0;
       margin-left: 10px; }
+    body .panel-container.rtl .window-container .top-bar .general-options {
+      border-right: 0;
+      border-left: 1px #F1F1F1 solid;
+      margin-left: 20px;
+      margin-right: 0; }
+      body .panel-container.rtl .window-container .top-bar .general-options a {
+        border-radius: 0 20px 0 0; }
+        body .panel-container.rtl .window-container .top-bar .general-options a svg {
+          margin-right: 0;
+          margin-left: 10px; }
+    body .panel-container.rtl .window-container .top-bar ul li a svg {
+      margin-left: 10px;
+      margin-right: 0; }
+    body .panel-container.rtl .window-container .content-wrapper .side-menu {
+      border-right: 0;
+      border-left: 1px #f1f1f1 solid; }
+    body .panel-container.rtl .window-container .content-wrapper .content .buttons a {
+      margin-right: 0;
+      margin-left: 10px; }
+      body .panel-container.rtl .window-container .content-wrapper .content .buttons a svg, body .panel-container.rtl .window-container .content-wrapper .content .buttons a img {
+        margin-right: 0;
+        margin-left: 10px; }
+    body .panel-container.rtl .window-container .content-wrapper .content .stat-flex .item {
+      margin-right: 0;
+      margin-left: 20px; }
+    body .panel-container.rtl .window-container .content-wrapper .content .stat-flex.horizontal .item {
+      margin: 0;
+      margin-bottom: 20px; }
+      body .panel-container.rtl .window-container .content-wrapper .content .stat-flex.horizontal .item .title {
+        border-radius: 0 20px 20px 0; }
+      body .panel-container.rtl .window-container .content-wrapper .content .stat-flex.horizontal .item .detail {
+        border-left: 1px #f1f1f1 solid; }
+        body .panel-container.rtl .window-container .content-wrapper .content .stat-flex.horizontal .item .detail:last-child {
+          border: 0;
+          border-radius: 20px 0 0 20px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "urw_regular";
+  src: url("../../../assets/fonts/urw/urw_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "janna_regular";
+  src: url("../../../assets/fonts/janna/janna_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "janna_bold";
+  src: url("../../../assets/fonts/janna/janna_bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+a {
+  text-decoration: none; }
+
+* {
+  box-sizing: border-box; }
+
+.widget {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 350px;
+  background: #FFF;
+  border-radius: 20px;
+  z-index: 1001;
+  box-shadow: -10px 10px 30px 0 rgba(0, 0, 0, 0.05);
+  font-family: "urw_regular"; }
+  .widget .title {
+    background: #F9F9F9;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 20px 20px 0 0;
+    color: #555;
+    font-size: 15px;
+    border-bottom: 1px #f1f1f1 solid; }
+  .widget form {
+    width: 100%;
+    padding: 20px; }
+    .widget form label {
+      margin-bottom: 20px;
+      text-align: center;
+      width: 100%;
+      display: block; }
+      .widget form label input {
+        display: block;
+        line-height: 50px;
+        color: #555;
+        border-radius: 20px;
+        background: #F9F9F9;
+        padding: 0 20px;
+        width: 100%;
+        font-family: "urw_regular";
+        border: 0;
+        text-align: center; }
+        .widget form label input:last-child {
+          margin: 0; }
+        .widget form label input:focus {
+          border: 0;
+          outline: 0; }
+      .widget form label.details {
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 20px; }
+        .widget form label.details span {
+          display: block;
+          margin-bottom: 20px;
+          color: #555;
+          font-size: 15px; }
+        .widget form label.details input {
+          background: #FFF; }
+    .widget form button {
+      display: block;
+      border: 0;
+      line-height: 50px;
+      margin-bottom: 20px;
+      width: 100%;
+      border-radius: 20px;
+      background: #f9f9f9;
+      color: #555;
+      cursor: pointer;
+      font-family: "urw_regular";
+      font-size: 15px;
+      transition: background 0.3s;
+      outline: 0; }
+      .widget form button:hover {
+        background: #f1f1f1; }
+      .widget form button[type="submit"] {
+        background: #1C9DFF;
+        color: #FFF; }
+        .widget form button[type="submit"]:hover {
+          background: #0F7CCF; }
+  .widget.loader {
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -99;
+    transition: 0.6s; }
+    .widget.loader.active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1001; }
+    .widget.loader img, .widget.loader svg {
+      display: block;
+      margin: 0px auto;
+      width: 80px;
+      height: 80px;
+      animation-name: spin;
+      animation-duration: 1s;
+      animation-iteration-count: infinite; }
+    .widget.loader svg path {
+      fill: #1C9DFF; }
+    .widget.loader span {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 50px;
+      color: #777; }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .widget.success img, .widget.success svg {
+    display: block;
+    margin: 0px auto;
+    width: 80px;
+    height: 80px; }
+  .widget.success span {
+    text-align: center;
+    display: block;
+    color: #555;
+    margin: 20px auto; }
+  .widget.success button {
+    margin: 0;
+    margin-top: 20px; }
+  .widget.error img, .widget.error svg {
+    display: block;
+    margin: 0px auto;
+    width: 80px;
+    height: 80px; }
+  .widget.error span {
+    text-align: center;
+    display: block;
+    color: #555;
+    margin: 20px auto; }
+  .widget.error button {
+    margin: 0;
+    margin-top: 20px; }
+
+/*# sourceMappingURL=widgets.css.map */

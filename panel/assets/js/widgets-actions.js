@@ -14,7 +14,8 @@ $(function(){
 
     $.post("widgets/actions.php", data)
     .done(function(response){
-      response = $.parseJSON(response);
+      console.log(response);
+      //response = $.parseJSON(response);
       if ( response.type == "success" )
       {
         let message = success("and error has occured");

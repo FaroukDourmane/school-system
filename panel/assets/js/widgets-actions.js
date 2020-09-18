@@ -15,15 +15,22 @@ $(function(){
     $.post("widgets/actions.php", data)
     .done(function(response){
       console.log(response);
-      //response = $.parseJSON(response);
+      response = $.parseJSON(response);
+
       if ( response.type == "success" )
       {
-        let message = success("and error has occured");
+        var message = success(response.message);
       }else{
-        let message = error("and error has occured");
+        var message = error(response.message);
       }
 
-      removeWidgets();
+      if ( response.close == "yes" )
+      {
+        removeWidgets();
+      }else{
+        removeLoader();
+      }
+
       $("body").prepend(message);
     });
   });

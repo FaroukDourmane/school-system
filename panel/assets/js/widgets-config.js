@@ -10,6 +10,16 @@ function removeWidgets()
   $(".widget").remove();
 }
 
+function hideWidgets()
+{
+  $(".widget").hide();
+}
+
+function showWidgets()
+{
+  $(".widget").show();
+}
+
 function removeLoader()
 {
   $(".widget.loader").remove();
@@ -17,6 +27,6 @@ function removeLoader()
 
 function addLoader()
 {
-  removeWidgets();
+  hideWidgets();
   $("body").prepend(loader);
 }

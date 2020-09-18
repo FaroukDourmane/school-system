@@ -13,7 +13,7 @@
 */
 
   require_once(__DIR__."/sessions.php");
-  //require_once(__DIR__."/functions/main.php");
+  require_once(__DIR__."/functions/main.php");
   deny_self(basename(__FILE__));
 
   require_once(__DIR__."/connection.php");
@@ -27,7 +27,7 @@
   ##############################################     ##
   if ( !isset($_SESSION["_TOKEN"]) )          ##     ##
   {                                           ##     ##
-    //$_SESSION["_TOKEN"] = generateToken();    ##     ##
+    $_SESSION["_TOKEN"] = generateToken();    ##     ##
   }                                           ##     ##
   ##############################################     ##
   ## END                                             ##

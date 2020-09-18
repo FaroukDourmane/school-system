@@ -2,14 +2,14 @@
   return '
   <div class="widget">
     <div class="title"> كلمة المرور </div>
-    <form class="" action="" method="post">
+    <form>
       <label>
-        <input type="password" name="" placeholder="كلمة المرور الجديدة" />
+        <input type="password" name="new_password" placeholder="كلمة المرور الجديدة" />
       </label>
 
       <label class="details">
         <span>أدخل كلمة المرور لتأكيد التعديل</span>
-        <input type="password" name="" value="" placeholder="●●●●●●●●●" />
+        <input type="password" name="old_password" value="" placeholder="●●●●●●●●●" />
       </label>
 
       <button type="submit">تغيير كلمة المرور</button>

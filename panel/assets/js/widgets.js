@@ -36,8 +36,14 @@ $(function(){
   /* Close widget action */
   $(document).on("click",".widget .close",function(e){
     e.preventDefault();
-    $("body").removeClass("disabled");
-    removeWidgets()
+    $(this).parents(".widget").remove();
+
+    if ( $(".widget").length <= 0 )
+    {
+      $("body").removeClass("disabled");
+    }else{
+      $(".widget").show();
+    }
   });
 
 });

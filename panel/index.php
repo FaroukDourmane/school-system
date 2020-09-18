@@ -38,12 +38,12 @@
           </div>
 
           <ul>
-            <li class="active"> <a href="#"> <?php echo file_get_contents("assets/svg/stats.svg"); ?> إحصائيات </a> </li>
-            <li> <a href="#"> <?php echo file_get_contents("assets/svg/flag.svg"); ?> الإنجازات </a> </li>
-            <li> <a href="#"> <?php echo file_get_contents("assets/svg/paper.svg"); ?> طباعة </a> </li>
-            <li> <a href="#"> <?php echo file_get_contents("assets/svg/home.svg"); ?> المدارس </a> </li>
-            <li> <a href="#"> <?php echo file_get_contents("assets/svg/calendar.svg"); ?> الزيارات </a> </li>
-            <li> <a href="#"> <?php echo file_get_contents("assets/svg/university.svg"); ?> المشرفات </a> </li>
+            <li> <a href="#dashboard" id="getPage"> <?php echo file_get_contents("assets/svg/stats.svg"); ?> إحصائيات </a> </li>
+            <li> <a href="#" id="getPage"> <?php echo file_get_contents("assets/svg/flag.svg"); ?> الإنجازات </a> </li>
+            <li> <a href="#prints" id="getPage"> <?php echo file_get_contents("assets/svg/paper.svg"); ?> طباعة </a> </li>
+            <li> <a href="#" id="getPage"> <?php echo file_get_contents("assets/svg/home.svg"); ?> المدارس </a> </li>
+            <li> <a href="#visits" id="getPage"> <?php echo file_get_contents("assets/svg/calendar.svg"); ?> الزيارات </a> </li>
+            <li> <a href="#" id="getPage"> <?php echo file_get_contents("assets/svg/university.svg"); ?> المشرفات </a> </li>
           </ul>
         </div>
 
@@ -56,66 +56,12 @@
             </ul>
           </div>
 
-          <div class="content">
-
-            <h1>إحصائيات</h1>
-            <div class="buttons">
-              <a href="#" class="outline"><?php echo file_get_contents("assets/svg/excel.svg"); ?> تحميل ملف إكسل</a>
-              <a href="#" class="outline"><?php echo file_get_contents("assets/svg/pdf-file.svg"); ?>  تحميل ملف PDF</a>
-            </div>
-
-            <!-- Main statistics flex -->
-            <div class="stat-flex">
-              <div class="item">
-                <div class="title">
-                  <?php echo file_get_contents("assets/svg/home.svg"); ?> المدارس
-                  <a href="#" class="add"> <img src="assets/svg/plus.svg" /> </a>
-                </div>
-                <div class="detail">
-                  <h3>50</h3>
-                  <span>المجموع</span>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="title"><?php echo file_get_contents("assets/svg/calendar.svg"); ?> الزيارات</div>
-                <div class="detail">
-                  <h3>50</h3>
-                  <span>المجموع</span>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="title"><?php echo file_get_contents("assets/svg/flag.svg"); ?> الإنجازات</div>
-                <div class="detail">
-                  <h3>50</h3>
-                  <span>المجموع</span>
-                </div>
-              </div>
-            </div>
-            <!-- END statistics flex -->
-
-            <div class="stat-flex horizontal">
-              <div class="item">
-                <div class="title"><?php echo file_get_contents("assets/svg/user.svg"); ?> المشرفات</div>
-                <div class="detail">
-                  <h3>50</h3>
-                  <span>قائدات المدارس</span>
-                </div>
-
-                <div class="detail">
-                  <h3>50</h3>
-                  <span>وكيلات المدارس</span>
-                </div>
-
-                <div class="detail">
-                  <h3>50</h3>
-                  <span>مشرفات الشعبة</span>
-                </div>
-              </div>
-            </div>
-
+          <!-- Main Content -->
+          <div class="content loading">
+            <?php //echo file_get_contents("assets/svg/loader.svg"); ?>
           </div>
+          <!-- END Content -->
+
         </div>
       </div>
       <!-- END Dashboard window -->
@@ -138,7 +84,7 @@
 
   <footer>
     <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/home-control.js"></script>
+    <script type="text/javascript" src="assets/js/panel-control.js"></script>
 
     <!-- Widgets -->
     <script type="text/javascript" src="assets/js/widgets-config.js"></script> <!-- Required: General Configurations -->

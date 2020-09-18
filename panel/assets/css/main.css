@@ -130,11 +130,11 @@ body {
                 vertical-align: middle;
                 margin-left: 0;
                 margin-right: 10px; }
-            body .panel-container .window-container .top-bar ul li.active a {
-              background: #1C9DFF;
-              color: #FFF; }
-              body .panel-container .window-container .top-bar ul li.active a svg path {
-                fill: #FFF; }
+              body .panel-container .window-container .top-bar ul li a.active {
+                background: #1C9DFF;
+                color: #FFF; }
+                body .panel-container .window-container .top-bar ul li a.active svg path {
+                  fill: #FFF; }
       body .panel-container .window-container .content-wrapper {
         display: flex;
         height: calc(100% - 70px);
@@ -163,7 +163,36 @@ body {
           height: 100%;
           overflow: auto;
           border-radius: 0 0 0 20px;
-          padding: 20px; }
+          padding: 20px;
+          position: relative; }
+          body .panel-container .window-container .content-wrapper .content.loading {
+            overflow: hidden !important; }
+            body .panel-container .window-container .content-wrapper .content.loading::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: #FFF;
+              opacity: 0.9; }
+            body .panel-container .window-container .content-wrapper .content.loading svg.loader {
+              height: 80px;
+              position: absolute;
+              z-index: 2;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%); }
+              body .panel-container .window-container .content-wrapper .content.loading svg.loader path {
+                fill: #3A444B; }
+                body .panel-container .window-container .content-wrapper .content.loading svg.loader path.big {
+                  animation: spin linear 3s infinite;
+                  transform-origin: 10.8px 14px; }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-360deg); } }
           body .panel-container .window-container .content-wrapper .content h1 {
             color: #555555;
             margin-bottom: 20px; }
@@ -210,6 +239,8 @@ body {
                 font-size: 25px;
                 font-weight: 700;
                 position: relative; }
+                body .panel-container .window-container .content-wrapper .content .stat-flex .item .title a {
+                  color: #FFF; }
                 body .panel-container .window-container .content-wrapper .content .stat-flex .item .title .add {
                   position: absolute;
                   display: block;
@@ -224,14 +255,14 @@ body {
                     vertical-align: 2px;
                     height: 15px;
                     width: 15px; }
-                body .panel-container .window-container .content-wrapper .content .stat-flex .item .title svg {
+                body .panel-container .window-container .content-wrapper .content .stat-flex .item .title svg, body .panel-container .window-container .content-wrapper .content .stat-flex .item .title img {
                   display: block;
                   margin: 0 auto;
                   height: 70px;
                   width: 70px;
                   margin-bottom: 10px; }
-                  body .panel-container .window-container .content-wrapper .content .stat-flex .item .title svg path {
-                    fill: #FFF; }
+                body .panel-container .window-container .content-wrapper .content .stat-flex .item .title svg path {
+                  fill: #FFF; }
               body .panel-container .window-container .content-wrapper .content .stat-flex .item .detail {
                 background: #f9f9f9;
                 display: flex;

@@ -14,7 +14,6 @@ $(function(){
 
     $.post("widgets/actions.php", data)
     .done(function(response){
-      console.log(response);
       response = $.parseJSON(response);
 
       if ( response.type == "success" )

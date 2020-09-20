@@ -34,17 +34,11 @@
       <div class="window-container">
         <div class="top-bar">
           <div class="general-options">
-            <a href="#"> <?php echo file_get_contents("assets/svg/user.svg"); ?> إعدادات الحساب </a>
+            <a href="#" class="burger"> <?php echo file_get_contents("assets/svg/burger.svg"); ?> </a>
+            <a href="#" class="toggle-side"> <?php echo file_get_contents("assets/svg/user.svg"); ?> <span>إعدادات الحساب</span> </a>
           </div>
 
-          <ul>
-            <li> <a href="#dashboard" id="getPage"> <?php echo file_get_contents("assets/svg/stats.svg"); ?> إحصائيات </a> </li>
-            <li> <a href="#" id="getPage"> <?php echo file_get_contents("assets/svg/flag.svg"); ?> الإنجازات </a> </li>
-            <li> <a href="#prints" id="getPage"> <?php echo file_get_contents("assets/svg/paper.svg"); ?> طباعة </a> </li>
-            <li> <a href="#" id="getPage"> <?php echo file_get_contents("assets/svg/home.svg"); ?> المدارس </a> </li>
-            <li> <a href="#visits" id="getPage"> <?php echo file_get_contents("assets/svg/calendar.svg"); ?> الزيارات </a> </li>
-            <li> <a href="#" id="getPage"> <?php echo file_get_contents("assets/svg/university.svg"); ?> المشرفات </a> </li>
-          </ul>
+          <?php include "list.php"; ?>
         </div>
 
         <div class="content-wrapper">
@@ -54,6 +48,8 @@
               <li> <a href="#" class="openWidget" id="change_password">تغيير كلمة المرور</a> </li>
               <li> <a href="#" class="openWidget" id="personal_info">المعلومات الشخصية</a> </li>
             </ul>
+
+            <?php include "list.php"; ?>
           </div>
 
           <!-- Main Content -->
@@ -84,6 +80,7 @@
 
   <footer>
     <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/panel-control.js"></script>
 
     <!-- Widgets -->
